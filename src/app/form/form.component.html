@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row box">
+        <div class="col-md-12">
+            <div class="clear-20"></div>
+            <div class="white-bg">
+                <form #upidata='ngForm' (ngSubmit)="submit()" class="form-form-register">
+                        <div style="padding: 3% 0 0 20%;">
+                                <div class="row custom-row">
+                            
+                                        <div class="col-md-3">
+                                            <span>Enter your Mobile No.</span>
+                                        </div>
+                                        <div class="col-md-1"><span>:</span></div>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" name="pn" [(ngModel)]="pn" id="pn" required>
+                                        </div>
+                                    </div>
+                                    <div class="row custom-row">
+                                        <div class="col-md-3">
+                                            <span>Enter your Upi Id</span>
+                                        </div>
+                                        <div class="col-md-1"><span>:</span></div>
+                                        <div class="col-md-5" style="display: inline-flex">
+                                            <input type="text" class="form-control" name="pa"  required [(ngModel)]="pa" id="pa">
+                                            <span class="at">@</span>
+                                            <input type="text" class="form-control"  name="psp" required  [(ngModel)]="psp" id="psp">
+                                        </div>
+                                       
+                                    </div>
+                                    
+                                    <div class="row custom-row">
+                                            <div class="col-md-3">
+                                                    <span>Select Promo</span>
+                                                </div>
+                                                <div class="col-md-1"><span>:</span></div>
+                                                <div class="col-md-5">
+                                                    <select name="promo" id="" class="form-control"  required [(ngModel)]="promo" id="promo">
+                                                        <option value="" selected>Select your promo</option>
+                                                        <option value="">Option 1</option>
+                                                        <option value="">Option 2</option>
+                                                        <option value="">Option 3</option>
+                                                    </select>
+                                                </div>
+                                    </div>
+                                    <div class="row custom-row">
+                                        <div class="col-md-3">
+                                            <span>Enter Amount</span>
+                                        </div>
+                                        <div class="col-md-1"><span>:</span></div>
+                                        <div class="col-md-5">
+                                            <input type="text" class="form-control" name="am" required [(ngModel)]="am" id="am">
+                                        </div>
+                                    </div>
+                                    <div class="row custom-row">
+                                            <div class="col-md-3">
+                                                <span>Transaction Note</span>
+                                            </div>
+                                            <div class="col-md-1"><span>:</span></div>
+                                            <div class="col-md-5">
+                                                <input type="text" class="form-control"  name="tn" required [(ngModel)]="tn" id="tn">
+                                            </div>
+                                        </div>
+                                    
+                        </div>
+                        <div class="row custom-row" style="text-align: center;padding: 3%;">
+                            <input type="submit" class="btn btn-submit" value="PAY NOW">
+                        </div>
+                        <div class="row text-center" *ngIf="showurl">
+                            <div class="col-md-12">
+                                <a href=`{{paymenturl}}`>{{paymenturl}}</a>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
